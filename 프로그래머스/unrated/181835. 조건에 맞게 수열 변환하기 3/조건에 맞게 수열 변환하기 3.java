@@ -2,13 +2,16 @@ class Solution {
     public int[] solution(int[] arr, int k) {
         int[] answer = new int[arr.length];
         
-        for(int i = 0; i < answer.length; i++) {
-            if(k % 2 != 0) {
+        if(k % 2 != 0) {
+            for(int i = 0; i < answer.length; i++) {
                 answer[i] = arr[i] * k;
-            } else {
+            }
+        } else {
+            for(int i = 0; i < answer.length; i++) {
                 answer[i] = arr[i] + k;
             }
         }
+        
         return answer;
     }
 }
